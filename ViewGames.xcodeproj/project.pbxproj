@@ -13,6 +13,10 @@
 		800A87042998F58000C45C63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 800A87022998F58000C45C63 /* Main.storyboard */; };
 		800A87062998F58100C45C63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 800A87052998F58100C45C63 /* Assets.xcassets */; };
 		800A87092998F58100C45C63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 800A87072998F58100C45C63 /* LaunchScreen.storyboard */; };
+		800A87112998F58900C45C63 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A87102998F58900C45C63 /* Webservice.swift */; };
+		800A87132998F59300C45C63 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A87122998F59300C45C63 /* Model.swift */; };
+		800A87152998FA6100C45C63 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A87142998FA6100C45C63 /* DetailViewController.swift */; };
+		800A87182998FD5B00C45C63 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 800A87172998FD5B00C45C63 /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,9 @@
 		800A87052998F58100C45C63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		800A87082998F58100C45C63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		800A870A2998F58100C45C63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		800A87102998F58900C45C63 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
+		800A87122998F59300C45C63 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		800A87142998FA6100C45C63 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				800A87182998FD5B00C45C63 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,8 +65,11 @@
 			isa = PBXGroup;
 			children = (
 				800A86FC2998F58000C45C63 /* AppDelegate.swift */,
+				800A87102998F58900C45C63 /* Webservice.swift */,
+				800A87122998F59300C45C63 /* Model.swift */,
 				800A86FE2998F58000C45C63 /* SceneDelegate.swift */,
 				800A87002998F58000C45C63 /* ViewController.swift */,
+				800A87142998FA6100C45C63 /* DetailViewController.swift */,
 				800A87022998F58000C45C63 /* Main.storyboard */,
 				800A87052998F58100C45C63 /* Assets.xcassets */,
 				800A87072998F58100C45C63 /* LaunchScreen.storyboard */,
@@ -83,6 +94,9 @@
 			dependencies = (
 			);
 			name = ViewGames;
+			packageProductDependencies = (
+				800A87172998FD5B00C45C63 /* SDWebImage */,
+			);
 			productName = ViewGames;
 			productReference = 800A86F92998F58000C45C63 /* ViewGames.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 800A86F02998F58000C45C63;
+			packageReferences = (
+				800A87162998FD5B00C45C63 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 800A86FA2998F58000C45C63 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +155,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				800A87132998F59300C45C63 /* Model.swift in Sources */,
 				800A87012998F58000C45C63 /* ViewController.swift in Sources */,
 				800A86FD2998F58000C45C63 /* AppDelegate.swift in Sources */,
+				800A87152998FA6100C45C63 /* DetailViewController.swift in Sources */,
+				800A87112998F58900C45C63 /* Webservice.swift in Sources */,
 				800A86FF2998F58000C45C63 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +378,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		800A87162998FD5B00C45C63 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		800A87172998FD5B00C45C63 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 800A87162998FD5B00C45C63 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 800A86F12998F58000C45C63 /* Project object */;
 }
